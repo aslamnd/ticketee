@@ -18,6 +18,9 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'haml'
+gem 'haml-rails'
+gem 'simple_form'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -39,4 +42,8 @@ group :test do
   gem 'cucumber-rails'
   gem 'capybara'
   gem 'database_cleaner'
+  gem 'guard-rspec'
+  gem 'spork'
+  gem 'guard-spork'
+  gem 'guard-cucumber'
 end
