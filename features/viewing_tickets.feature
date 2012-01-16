@@ -5,11 +5,11 @@ Feature: Viewing tickets
 
   Background:
     Given there is a project called "Textmate 2"
-    And that project has a ticket
+    And that project has a ticket:
       | title          | description                        |
       | Make it shiny! | Gradients! Something silly! Oh my! |
     And there is a project called "Internet Explorer"
-    And that project has a ticket
+    And that project has a ticket:
       | title               | description  |
       | Standard compliance | Isn't a joke |
     And I am on the homepage
