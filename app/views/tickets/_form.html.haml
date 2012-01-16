@@ -1,0 +1,6 @@
+= simple_form_for [ @project, @ticket ] do |f|
+  = f.error_messages
+  = f.input :title
+  = f.input :description
+
+  = f.submit
