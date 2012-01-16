@@ -47,4 +47,5 @@ group :test do
   gem 'spork'
   gem 'guard-spork'
   gem 'guard-cucumber'
+  gem 'factory_girl_rails'
 end
