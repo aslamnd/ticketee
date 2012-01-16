@@ -6,3 +6,9 @@
 = link_to "Delete Project", @project, :method => :delete, :confirm => "Are you sure to delete this proejct"
 
 = link_to "New Ticket", new_project_ticket_path(@project)
+
+%ul
+  - @project.tickets.each do |ticket|
+    %li
+      = "# #{ticket.id} - "
+      = link_to ticket.title, [@project, ticket]
