@@ -17,3 +17,7 @@ Given /^I am signed in as them$/ do
     Then I should see "Signed in successfully."
   })
 end
+
+When /^I check "([^"]*)"$/ do |label|
+  check label
+end
