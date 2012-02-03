@@ -8,13 +8,16 @@ Feature: Viewing tickets
       | email             | password |
       | user@ticketee.com | password |
     And there is a project called "Textmate 2"
+    And "user@ticketee.com" can view the "Textmate 2" project
     And "user@ticketee.com" has created a ticket for this project:
       | title          | description                        |
       | Make it shiny! | Gradients! Something silly! Oh my! |
     And there is a project called "Internet Explorer"
+    And "user@ticketee.com" can view the "Internet Explorer" project
     And "user@ticketee.com" has created a ticket for this project:
       | title               | description  |
       | Standard compliance | Isn't a joke |
+    And I am signed in as them
     And I am on the homepage
 
 
