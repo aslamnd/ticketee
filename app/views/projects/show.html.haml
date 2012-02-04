@@ -4,9 +4,10 @@
 
 - admin_only do
   = link_to "Edit Project", edit_project_path(@project)
-  = link_to "Delete Project", @project, :method => :delete, :confirm => "Are you sure to delete this proejct"
+  = link_to "Delete Project", @project, :method => :delete, :confirm => "Are you sure to delete this project"
 
-= link_to "New Ticket", new_project_ticket_path(@project)
+- authorized?("create tickets".to_sym, @project) do
+  = link_to "New Ticket", new_project_ticket_path(@project)
 
 %ul
   - @project.tickets.each do |ticket|
