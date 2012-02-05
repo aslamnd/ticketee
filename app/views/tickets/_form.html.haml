@@ -1,6 +1,7 @@
-= simple_form_for [ @project, @ticket ] do |f|
+= simple_form_for [ @project, @ticket ], :html => {:multipart => true} do |f|
   = f.error_messages
   = f.input :title
   = f.input :description
+  = f.input :asset, :label => "File"
 
   = f.submit
