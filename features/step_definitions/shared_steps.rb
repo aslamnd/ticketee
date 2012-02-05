@@ -40,3 +40,7 @@ end
 Then /^I should see the "([^"]*)" link$/ do |text|
   page.should have_css("a", :text => text), "Expected to see the #{text.inspect} link, but did not"
 end
+
+When /^I attach the file "([^"]*)" to "([^"]*)"$/ do |file, label|
+  attach_file(label, file)
+end
