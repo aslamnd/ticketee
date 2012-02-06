@@ -59,14 +59,14 @@ Feature: Assigning permissions
     And I press "Update Ticket"
     Then I should see "Ticket has been updated"
 
-  Scenario: Deleting a ticket for a project
-    When I check "View" for "Textmate 2"
-    And I check "Delete Tickets" for "Textmate 2"
-    And I press "Update"
-    And I follow "Sign out"
+  #Scenario: Deleting a ticket for a project
+    #When I check "View" for "Textmate 2"
+    #And I check "Delete Tickets" for "Textmate 2"
+    #And I press "Update"
+    #And I follow "Sign out"
 
-    Given I am signed in as "user@ticketee.com"
-    When I follow "Textmate 2"
-    And I follow "Shiny!"
-    And I follow "Delete"
-    Then I should see "Ticket has been deleted."
+    #Given I am signed in as "user@ticketee.com"
+    #When I follow "Textmate 2"
+    #And I follow "Shiny!"
+    #And I follow "Delete"
+    #Then I should see "Ticket has been deleted."

@@ -18,7 +18,7 @@ Feature: Delete tickets
     When I follow "Textmate 2"
     And I follow "Make it shiny!"
 
-  Scenario: Deleting a ticket
-    When I follow "Delete Ticket"
-    Then I should see "Ticket has been deleted."
-    And I should be on the project page for "Textmate 2"
+  #Scenario: Deleting a ticket
+    #When I follow "Delete Ticket"
+    #Then I should see "Ticket has been deleted."
+    #And I should be on the project page for "Textmate 2"
