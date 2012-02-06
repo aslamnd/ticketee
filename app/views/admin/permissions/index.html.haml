@@ -1,6 +1,6 @@
 %h2= "Permissions for #{ @user.email}"
 
-= form_for update_user_permissions_path, :method => :put do
+= form_tag update_user_permissions_path, :method => :put do
   %table
     %thead
       %th Project
@@ -14,7 +14,7 @@
 
           - permissions.each do |name, text|
             %td
-              = check_box_tag "permissions[#{project.id}][#{name}]",
+              = check_box_tag "permissions[#{project.id}][#{name}]", 
                 @ability.can?(name.to_sym, project)
 
 

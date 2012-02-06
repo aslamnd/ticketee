@@ -58,10 +58,10 @@ Feature: Assigning permissions
     And I fill in "Title" with "Really shiny!"
     And I press "Update Ticket"
     Then I should see "Ticket has been updated"
-                                                                                                                          Scenario: Deleting a ticket for a project
+
   Scenario: Deleting a ticket for a project
     When I check "View" for "Textmate 2"
-    And I check "Delete tickets" for "Textmate 2"
+    And I check "Delete Tickets" for "Textmate 2"
     And I press "Update"
     And I follow "Sign out"
 
