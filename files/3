@@ -1,0 +1,1 @@
+Remember that you call the field asset internally, but to the user, it’s called File? This column-naming convention is the reason for the different names. To ease confusion for people working on the application (you!)
