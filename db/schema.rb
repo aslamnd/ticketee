@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120205104717) do
+ActiveRecord::Schema.define(:version => 20120207121652) do
 
   create_table "assets", :force => true do |t|
     t.string   "asset_file_name"
@@ -21,6 +21,17 @@ ActiveRecord::Schema.define(:version => 20120205104717) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "comments", :force => true do |t|
+    t.text     "text"
+    t.integer  "user_id"
+    t.integer  "ticket_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "comments", ["ticket_id"], :name => "index_comments_on_ticket_id"
+  add_index "comments", ["user_id"], :name => "index_comments_on_user_id"
 
   create_table "permissions", :force => true do |t|
     t.integer  "user_id"

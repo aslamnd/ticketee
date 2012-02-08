@@ -16,3 +16,13 @@
 
 - authorized?("delete tickets", @project) do
   = link_to "Delete Ticket", [@project, @ticket], :method => :delete, :confirm => "Are you sure to delete this ticket?"
+
+
+= render "comments/form"
+
+%h3 Comments
+#comments
+  - if @ticket.comments.exists?
+    = render @ticket.comments.select(&:persisted?)
+  - else
+    There are no comments for this ticket.

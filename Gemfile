@@ -57,4 +57,5 @@ group :test do
   gem 'guard-cucumber'
   gem 'factory_girl_rails'
   gem 'email_spec'
+  gem 'launchy'
 end

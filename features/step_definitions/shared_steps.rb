@@ -44,3 +44,13 @@ end
 When /^I attach the file "([^"]*)" to "([^"]*)"$/ do |file, label|
   attach_file(label, file)
 end
+
+Then /^show me the page$/ do
+  save_and_open_page
+end
+
+Given /^I follow "([^"]*)" within "([^"]*)"$/ do |link, selector|
+  within(selector) do
+    click_link link
+  end
+end
