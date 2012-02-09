@@ -4,6 +4,11 @@
     %title= content_for?(:title) ? yield(:title) : "Ticketee"
 
     = stylesheet_link_tag    "application"
+    %style
+      - for state in @states
+        = ".state_#{state.name.parameterize} {"
+        = "background: #{state.background};"
+        = "color: #{state.color}; }"
     = javascript_include_tag "application"
     = csrf_meta_tags
 

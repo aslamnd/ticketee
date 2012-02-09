@@ -1,0 +1,5 @@
+= link_to "New States", new_admin_state_path
+
+%ul#states
+  - for state in @states
+    %li= state.name

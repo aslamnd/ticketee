@@ -59,3 +59,7 @@ group :test do
   gem 'email_spec'
   gem 'launchy'
 end
+
+platforms :ruby do
+  gem 'rb-readline'
+end
