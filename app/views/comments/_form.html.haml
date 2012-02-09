@@ -3,5 +3,8 @@
   = f.error_messages
   %p
     = f.input :text
+  %p
+    = f.label :state_id
+    = f.collection_select :state_id, State.all, :id, :name
 
   = f.submit

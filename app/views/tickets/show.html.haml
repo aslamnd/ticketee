@@ -1,6 +1,9 @@
 #ticket
   %h2= @ticket.title
   %small= "Created by #{ @ticket.user.email }"
+
+  = render @ticket.state if @ticket.state
+
   = simple_format(@ticket.description)
 
   - if @ticket.assets.exists?

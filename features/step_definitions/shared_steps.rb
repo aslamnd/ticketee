@@ -54,3 +54,7 @@ Given /^I follow "([^"]*)" within "([^"]*)"$/ do |link, selector|
     click_link link
   end
 end
+
+When /^I select "([^"]*)" from "([^"]*)"$/ do |option, list|
+  select(option, :from => list)
+end
