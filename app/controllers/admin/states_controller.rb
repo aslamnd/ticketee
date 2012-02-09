@@ -14,4 +14,11 @@ class Admin::StatesController < Admin::BaseController
     end
   end
 
+  def make_default
+    @state = State.find(params[:id])
+    @state.default!
+
+    redirect_to admin_states_path, :notice => "#{@state.name} is now the default state."
+  end
+
 end
