@@ -58,3 +58,7 @@ end
 When /^I select "([^"]*)" from "([^"]*)"$/ do |option, list|
   select(option, :from => list)
 end
+
+Then /^I should not see "([^"]*)" element$/ do |css|
+  page.should_not(have_css(css), "Expected to not see the #{css} element, but did.")
+end

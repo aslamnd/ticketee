@@ -70,3 +70,19 @@ Feature: Assigning permissions
     #And I follow "Shiny!"
     #And I follow "Delete"
     #Then I should see "Ticket has been deleted."
+
+  Scenario: Changing states for a ticket
+    When I check "View" for "Textmate 2"
+    And I check "Change States" for "Textmate 2"
+    And I press "Update"
+    And I follow "Sign out"
+
+    Given I am signed in as "user@ticketee.com"
+    And there is a state called "Open"
+    When I follow "Textmate 2"
+    And I follow "Shiny!"
+    When I fill in "Text" with "Opening this ticket."
+    And I select "Open" from "State"
+    And I press "Create Comment"
+    Then I should see "Comment has been created."
+    And I should see "Open" within "#ticket .state"
