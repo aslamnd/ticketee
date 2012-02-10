@@ -28,6 +28,12 @@ Then /^I should see "([^"]*)" within "([^"]*)"$/ do |text, element|
   end
 end
 
+Then /^I should not see "([^"]*)" within "([^"]*)"$/ do |text, element|
+  within(element) do
+    page.should_not have_content text
+  end
+end
+
 Then /^I should not see the "([^"]*)" link$/ do |text|
   page.should_not have_css("a", :text => text), "Expected to see the #{text.inspect} link, but did not"
 end
