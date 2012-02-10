@@ -3,6 +3,9 @@
   = f.input :title
   = f.input :description
 
+  = label_tag :tags
+  = text_field_tag :tags, params[:tags]
+
   - number = 0
   = f.fields_for :assets do |asset|
     %p
