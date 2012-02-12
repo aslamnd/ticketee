@@ -48,6 +48,11 @@ class TicketsController < ApplicationController
     redirect_to @project, :notice => "Ticket has been deleted."
   end
 
+  def search
+    @tickets = @project.tickets.search(params[:search])
+    render 'projects/show'
+  end
+
 
 
   private
