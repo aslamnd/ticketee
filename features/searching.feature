@@ -12,9 +12,11 @@ Feature: Searching
     And "user@ticketee.com" can view the "Ticketee" project
     And "user@ticketee.com" can tag in the "Ticketee" project
     And "user@ticketee.com" has created a ticket for this project:
-      | title   | description      | tags        |
-      | Tag!    | Hey! You're it!  | iteration_1 |
-      | Tagged! | Hey! I'm it now! | iteration_2 |
+      | title | description     | tags        | state |
+      | Tag!  | Hey! You're it! | iteration_1 | Open  |
+    And "user@ticketee.com" has created a ticket for this project:
+      | title   | description      | tags        | state  |
+      | Tagged! | Hey! I'm it now! | iteration_2 | Closed |
     Given I am on the homepage
     And I follow "Ticketee" within "#projects"
 
@@ -25,3 +27,8 @@ Feature: Searching
     Then I should see "Tag!"
     And I should not see "Tagged!"
 
+  Scenario: Finding by state
+    When I fill in "Search" with "state:Open"
+    And I press "Search"
+    And I should see "Tag!"
+    And I should not see "Tagged!"
